@@ -1,0 +1,650 @@
+/*----------
+	Theme Name: Max Restaurant
+	Start Date : 21 - December - 2016
+	End Date : 16 - January - 2017
+	Last change: 
+	Version: 1.0
+	Assigned to:
+	Primary use:
+	
+----------*/
+
+	/* [Layout] */
+
+/*----------
+	
+	## Font List
+		- Raleway :- font-family: 'Raleway', sans-serif;
+		- Lato :- font-family: 'Lato', sans-serif;
+		- GreateVibes :- font-family: 'Great Vibes', cursive;
+
+	## Global
+	
+		- Padding/Margin
+		- Section Padding
+		
+	## Site Header	
+	
+		- Navigation Menu
+			- Nav Main
+			- Nav Header
+			- Nav Toggle
+			- Nav Switch
+			- Nav Items
+			- Nav Dropdown
+
+	
+	## Widgets
+	
+	## Responsive
+	- Min Width : 992px & Max Width 1200px
+	
+	- Min Width : 992px
+	
+		## Navigation Menu
+		- Nav Main
+		- Nav Header
+		- Nav Toggle
+		- Nav Switch
+		- Nav Items
+		- Nav Dropdown
+	
+	* Responsive		
+		- min-width: 1200
+		- min-width: 992
+		- min-width: 768
+		- max-width: 1200
+		- min-width: 992 to max-width: 1199		
+		- max-width: 991
+		- min-width: 768 to max-width: 991
+		- max-width: 767
+		- max-width: 639
+		- max-width: 479
+		
+----------*/
+
+/* ## Global ******************************************* */
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #000;
+	overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+	height: auto;
+}
+#logo
+{
+	margin-top: -20%; 
+}
+a {
+    outline: 0 !important;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,li,span {
+	word-wrap: break-word;
+}
+
+
+/* - Padding/Margin */
+.no-padding {
+	padding: 0;
+}
+.no-left-padding{
+	padding-left: 0;
+}
+.no-right-padding {
+	padding-right: 0;
+}
+.no-top-padding {
+	padding-top: 0;
+}
+.no-bottom-padding {
+	padding-bottom: 0;
+}
+.no-margin {
+	margin: 0;
+}
+.no-left-margin {
+	margin-left: 0;
+}
+.no-right-margin {
+	margin-right: 0;
+}
+.no-top-margin {
+	margin-top: 0;
+}
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+
+/* - Section Padding */
+.section-padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+.padding-10 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.padding-20 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.padding-30 {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.padding-40 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.padding-50 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.padding-60 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.padding-70 {
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.padding-80 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.padding-90 {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+.padding-100 {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.vertical_middle {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+.nav_absolute {
+	position: absolute;
+}
+.align_left {
+	text-align: left;
+}
+.align_right {
+	text-align: right;
+}
+.align_center {
+	text-align: center;
+}
+
+/* - OW pull-left/pull-right */
+.ow-pull-left  {
+	float: left;
+}
+.ow-pull-right  {
+	float: right;
+}
+
+.main-container {
+	width: 1920px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+/* ## Site Header ******************************************* */
+
+/* - Search */
+.search-box {
+	background-color: #303030;
+	padding: 10px;
+	position: absolute;
+	right: 15px;
+	top: 100%;
+	width: 260px;
+	opacity: 0;
+	transform: scaleY(0);
+	-webkit-transform: scaleY(0);
+	-moz-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform-origin: 0 0 0;
+	transition: all 0.4s ease-in-out 0s;
+	z-index: 101;
+}
+.search-box.active {
+	opacity: 1;
+	transform: scaleY(1);
+	-webkit-transform: scaleY(1);
+	-moz-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	visibility: visible;
+}
+.search-box form {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	display: block;
+}
+.search-box form input {
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	border-radius: 0;
+	color: #ccc;
+	font-size: 14px;
+	font-style: italic;
+	height: auto;
+}
+.search-box form input:focus {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	outline: none;
+	border-color: #fff;
+}
+.search-box span {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.search-box span i {
+	font-size: 15px;
+	color: #f97b25;
+	float: right;
+	margin: 5px;
+}
+
+/* - SlidePanel */
+#slidepanel { 
+	display: block; 
+}
+#closeit,
+#toggle,
+#slideit {
+	display: none;
+}
+
+
+/* - Navigation Menu */
+.ownavigation {
+	background-color: #f6f6f6;
+	border: none;
+	border-radius: 0;
+	min-height: 1px;
+	margin-bottom: 0;
+}
+
+/* - Nav Header */
+.navbar-brand {
+	height: auto;
+	padding: 0;
+	height: 50px;
+}
+
+/* - Nav Items */
+.ownavigation .navbar-nav li  a {
+	color: #232323;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.56px;
+	background-color: transparent;
+	word-wrap: break-word;
+	white-space: normal;
+}
+.ownavigation .navbar-nav > .active > a, 
+.ownavigation .navbar-nav > .active > a:focus, 
+.ownavigation .navbar-nav > .active > a:hover,
+.ownavigation .navbar-nav li:hover > a,
+.ownavigation .navbar-nav li a:hover,
+.ownavigation .navbar-nav li a:focus {
+	background-color: transparent;
+}
+
+/* ## Responsive ************************************************************************************** */
+	
+/*----------------------------------------------------
+	* Responsive
+------------------------------------------------------*/
+
+/* - min-width: 1200 */
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+/* - min-width: 992 */
+@media (min-width: 992px) {
+	.desktop-hide {
+		display: none;
+	}
+	
+	/* ## Navigation Menu */
+	.nav_trans {
+		background: transparent;
+	}
+
+	/* - Nav Switch */
+	.ownavigation .ddl-switch {
+		display: none !important;
+	}
+
+	/* - Nav Items */
+	.ownavigation .navbar-nav > li {
+		margin: 0 20px;
+	}
+	.ownavigation .navbar-nav > li:first-child {
+		margin-left: 0;
+	}
+	.ownavigation .navbar-nav > li > a {
+		padding: 10px 0;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.ownavigation .navbar-nav > .active > a, 
+	.ownavigation .navbar-nav > .active > a:focus, 
+	.ownavigation .navbar-nav > .active > a:hover,
+	.ownavigation .navbar-nav li:hover > a,
+	.ownavigation .navbar-nav li a:hover {
+		background-color: transparent;
+		color: #004586;
+	}
+
+	/* - Nav Dropdown */
+	.ownavigation .navbar-collapse > ul > li > .dropdown-menu {
+		top: 100%;
+		left: 0;
+	}
+	.ownavigation ul li > .dropdown-menu {
+		background-color: #004586;
+		border: none;
+		left: 100%;
+		border-radius: 0;
+		margin-top: 0;
+		transition: all 0.2s ease-in-out 0s;
+		box-shadow: none;
+		opacity: 0;
+		visibility: hidden;
+		top: 0;
+		display: block;
+		padding: 0;
+		min-width: 200px;
+		max-width: 200px;
+		box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+		-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+	}
+	.ownavigation .navbar-nav li .dropdown-menu > li > a {
+		color: #fff;
+		padding: 8px 15px;
+		-webkit-transition: all 1s ease 0s;
+		-moz-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		transition: all 1s ease 0s;
+	}
+	.ownavigation .navbar-nav li .dropdown-menu > li > a:hover {
+		color: #fcb100;
+	}
+	.ownavigation .navbar-nav li.dropdown:hover > .dropdown-menu {
+		margin-top: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+	.ownavigation ul > li > .dropdown-menu {
+		left: 0; 
+	}
+	.ownavigation .navbar-collapse > ul > li:last-child > .dropdown-menu,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) > .dropdown-menu {
+		right: 0; 
+	}
+	.ownavigation ul > li > .dropdown-menu,
+	.ownavigation ul > li .dropdown-menu ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul ul ul ul	{
+		right: auto;
+	}
+	.ownavigation ul > li .dropdown-menu ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul ul ul ul {
+		left: 100%;
+	}
+	.ownavigation ul > li .dropdown-menu ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul ul ul {
+		right: 100%;
+	}
+	.ownavigation ul > li .dropdown-menu ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul ul,
+	.ownavigation ul > li .dropdown-menu ul ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child > .dropdown-menu,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:last-child .dropdown-menu ul ul ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) > .dropdown-menu,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul,
+	.ownavigation .navbar-collapse > ul > li:nth-last-child(2) .dropdown-menu ul ul ul ul ul ul ul ul ul {
+		left: auto;
+	}
+}
+
+/* - Min Width : 992px & Max Width 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {	
+	.ownavigation .navbar-nav > li {
+		margin-left: 9px;
+		margin-right: 9px;
+	}
+}
+
+/* - max-width: 991 */
+@media (max-width: 991px) {
+	/* - SlidePanel */
+	#slidepanel { 
+		display: none;
+		border-bottom: 1px solid #f97b25;
+	}
+	#slideit,
+	#toggle {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+	#loginpanel {
+		position: absolute;
+		right: 110px;
+		text-align: center;
+		top: 14px;
+	}	
+	#slideit,
+	#closeit {
+		color: #fcb100;
+		font-size: 25px;
+		position: relative;
+		right: -50px;
+		top: 13px;
+	}
+	#slideit:hover,
+	#closeit:hover {
+		color: #004586;
+	}
+	
+	.mobile-hide {
+		display: none;
+	}
+
+	/* ## Navigation Menu */
+
+	/* - Nav Main */
+	.ownavigation {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	/* - Nav Header */
+	.ownavigation .navbar-header .navbar-brand {
+		padding-left: 0;
+		margin-left: 0;
+	}	
+	
+	/* - Nav Items */
+	.ownavigation .navbar-nav {
+		width: 100%;
+		margin: 0;
+	}
+	.ownavigation .navbar-nav > li {
+		min-height: 0;
+		float: none;
+		clear: both;
+	}
+	.ownavigation .navbar-nav > li > a {
+		padding: 8px 0;
+		-webkit-transition: all 1s ease 0s;
+		-moz-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		transition: all 1s ease 0s;
+	}	
+	.ownavigation .navbar-nav > li.active a {
+		color: #fcb100;
+	}
+	.ownavigation .navbar-nav > li.active > a:hover,
+	.ownavigation .navbar-nav  li  a:hover {
+		color: #fcb100;
+	}
+	
+	/* - Nav Toggle */
+	.ownavigation .navbar-header {
+		float: none;
+	}
+	.ownavigation .navbar-toggle {
+		display: block;
+		border: 1px solid #fff;
+		background-color: #fcb100;
+		border-radius: 0;
+		margin: 30px 0 27px;
+		padding: 6px 5px;
+	}
+	.ownavigation .navbar-toggle .icon-bar { 
+		background-color: #fff; 
+	}	
+	.ownavigation .navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.ownavigation .navbar-collapse.collapse { 
+		display: none !important; 
+	}
+	.ownavigation .collapse.in{ 
+		display:block !important; 
+	}	
+	
+	/* - Nav Switch */
+	.ownavigation .ddl-switch {
+		background-color: #fcb100;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+		padding: 2px 6px;
+		position: absolute;
+		right: 0;
+		top: 3px;
+		z-index: 100;
+	}
+	.ownavigation .ddl-active > .ddl-switch:before {
+		content: "\f106";
+	}
+
+	/* - Nav Dropdown */
+	.ownavigation .dropdown-menu {
+		background-color: transparent;
+		border: 0 none;
+		margin-top: 0;
+		padding-left: 10px;
+		padding-top: 0;
+		position: relative;
+		width: 100%;
+		box-shadow: none;
+		float: left;
+	}
+	.ownavigation .dropdown-menu li {
+		display: inline-block;
+		width: 100%;
+	}
+	.ownavigation .navbar-nav > li:last-of-type {
+		margin-bottom: 15px;
+	}
+	.ownavigation .navbar-nav li .dropdown-menu > li > a {
+		color: #232323;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		-webkit-transition: all 1s ease 0s;
+		-moz-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		transition: all 1s ease 0s;
+	}
+	.ownavigation .navbar-nav li .dropdown-menu > li > a:hover {
+		color: #fcb100;
+	}
+}
+
+/* - max-width: 767 */
+@media (max-width: 767px) {
+	/* - Nav Toggle */
+	.ownavigation .navbar-toggle {
+		right: 0;
+	}
+}
