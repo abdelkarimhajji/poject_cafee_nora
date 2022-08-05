@@ -786,7 +786,7 @@
 .about-section2  .about-img {
 	position: absolute;
 	right: 0;
-	width: 43.125%;
+	/* width: 43.125%; */
 	top: 0;
 }
 /* - Services Section */
