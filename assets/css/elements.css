@@ -1,65 +1,4 @@
-/*------------------------------------
-	Theme Name: Max Restaurant
-	Start Date : 21 - December - 2016
-	End Date : 16 - January - 2017
-	Last change: 16 - January - 2017
-	Version: 1.0
-	Assigned to: 
-	Primary use: 
----------------------------------------*/
 
-/* ========================================================================== */
-/* ========================================================================== */
-							/* [Table of contents] */
-/* ========================================================================== */
-/* ========================================================================== */
-
-/*
-	+ Header
-		- Header1
-		- Header2
-		
-	+ Footer
-		- Footer Main 1
-		- Footer Main 2
-		
-	+ Section Header
-	+ Page Banner
-	+ Shortcodes
-		- Slider Section
-		- About Section
-		- Surprise Section
-		- About Section 2
-		- Services Section
-		- Counter Section
-		- Menu Section
-		- Book Table Section
-		- Event Section
-		- Testimonial Section
-		- Gallery Section
-		- Team Section
-		- Reservation Block
-		- Contact Section
-		- Error Section
-
-	+ Responsive
-		- min-width: 1200
-		- min-width: 992
-		- min-width: 768
-		- min to max: 1440 to 1680
-		- max-width: 1366
-		- max-width: 1200
-		- min to max: 992 to 1199
-		- max-width: 991
-		- min to max: 768 to 991
-		- max-width: 767
-		-  max-width: 639
-		- max-width: 479
-		-  max-width: 360
-*/
-
-/* + Header */
-/* - Header1 */
 .header_s .top-header1 {
 	background-color: #0c0c0c;
 }
@@ -786,8 +725,12 @@
 .about-section2  .about-img {
 	position: absolute;
 	right: 0;
-	width: 43.125%;
+	/* width: 43.125%; */
+	width: 50%;
 	top: 0;
+	display: flex;
+	justify-content: flex-end;
+	/* background-color: red; */
 }
 /* - Services Section */
 .services-section {
