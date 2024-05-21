@@ -245,6 +245,17 @@ h1,h2,h3,h4,h5,h6,p,a,li,span {
 	background-color: transparent;
 }
 
+.about-img
+{
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	/* width: 43.125%; */
+	width: 50%;
+	top: 0;
+	display: flex;
+	justify-content: flex-end;
+}
 /* ## Responsive ************************************************************************************** */
 	
 /*----------------------------------------------------
